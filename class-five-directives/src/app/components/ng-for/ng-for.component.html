@@ -1,0 +1,97 @@
+<section class="container">
+    <section class="row">
+        <section class="col">
+            <h1 class="jumbotron">NG For Component</h1>
+        </section>
+    </section>
+</section>
+
+<section class="container">
+    <section class="row">
+        <div class="col">
+            <div class="lead border p-3 bg-light">
+                <h2>Employee Names</h2>
+                <ul class="list-group my-3">
+                    <li class="list-group-item fs-4">{{empNames}}</li>
+                </ul>  
+            </div>
+        </div>
+        <div class="col">
+            <div class="lead border p-3 bg-light">
+                <h2>Employee Names</h2>
+                <ul class="list-group my-3">
+                    <li class="list-group-item fs-4" *ngFor="let i of empNames">{{i}}</li>
+                </ul>
+            </div>
+        </div>        
+    </section>
+    <section class="row">
+        <div class="col">
+            <div class="lead border p-3 bg-light">
+                <h2>Employee Names</h2>
+                <ul class="list-group my-3">
+                    <li class="list-group-item fs-4" *ngFor="let i of empNames; index as j">{{j+1}}. {{i}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+            <div class="lead border p-3 bg-light">
+                <h2>Employee Names</h2>
+                <ul class="list-group my-3">
+                    <li class="list-group-item fs-4" *ngFor="let i of empNames; first as j">{{j}}. {{i}}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="row">
+        <div class="col">
+            <div class="lead border p-3 bg-light">
+                <h2>Employee Names</h2>
+                <ul class="list-group my-3">
+                    <li class="list-group-item fs-4" *ngFor="let i of empNames; last as j">{{j}}. {{i}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+            <div class="lead border p-3 bg-light">
+                <h2>Employee Names</h2>
+                <ul class="list-group my-3">
+                    <li class="list-group-item fs-4" *ngFor="let i of empNames; odd as j">{{j}}. {{i}}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="row">
+        <div class="col">
+            <div class="lead border p-3 bg-light">
+                <h2>Employee Names</h2>
+                <ul class="list-group my-3">
+                    <li class="list-group-item fs-4" *ngFor="let i of empNames; even as j">{{j}}. {{i}}</li>
+                </ul>
+            </div>
+        </div>        
+    </section>
+</section>
+
+<section class="container">
+    <section class="row">
+        <div class="col">
+            <div class="border lead p-3">
+                <table class="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                    </tr>
+                    <tr *ngFor = "let item of empDetails">
+                        <td>{{item.name}}</td>
+                        <td>{{item.address}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.mobile}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+</section>

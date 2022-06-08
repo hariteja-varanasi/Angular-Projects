@@ -1,0 +1,85 @@
+<section class="container">
+    <section class="row">
+        <div class="col">
+            <h1 class="jumbotron">Static Form Component</h1>
+        </div>
+    </section>
+</section>
+
+<section class="container">
+    <section class="row">
+        <div class="col">
+            <div class="lead border p-3 my-3">                
+                <form #userForm = "ngForm" (ngSubmit)="onSubmit()">                    
+                    <div class="form-group my-3 fs-3">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="name" #name="ngModel" required
+                        [(ngModel)]="userModel.name" [class.is-invalid]="name.invalid && name.touched"/>
+                        <!-- <div class="lead p-2 text-danger fs-3">
+                            <p><b>name touched is {{name.touched}}</b></p>
+                            <p><b>name untouched is {{name.untouched}}</b></p>
+                            <p><b>name dirty is {{name.dirty}}</b></p>
+                            <p><b>name pristine is {{name.pristine}}</b></p>
+                            <p><b>name valid is {{name.valid}}</b></p>
+                            <p><b>name invalid is {{name.invalid}}</b></p>
+                        </div> -->
+                        <small class="text-danger" [class.d-none]="name.valid || 
+                        name.untouched">Name is required</small>                        
+                    </div>
+
+                    <div class="form-group my-3 fs-3">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" #email="ngModel" required
+                        [(ngModel)]="userModel.email" [class.is-invalid]="email.invalid && email.touched" />
+                        <small class="text-danger" [class.d-none]="email.valid || 
+                        email.untouched">Email is required</small>
+                    </div>
+
+                    <div class="form-group my-3 fs-3">
+                        <label for="phone">Phone</label>
+                        <input type="tel" class="form-control" name="phone" #phone="ngModel" required 
+                        [(ngModel)]="userModel.phone" [class.is-invalid]="phone.invalid && phone.touched" />
+                        <small class="text-danger" [class.d-none]="phone.valid || 
+                        phone.untouched">Phone is required</small>
+                    </div>
+
+                    <div class="form-group my-3 fs-3">
+                        <label for="topic" class="fs-3">Select Technology</label>
+                        <select name="topic" #topic="ngModel" required class="form-select fs-3" 
+                        [(ngModel)]="userModel.topic" [class.is-invalid]="topicHasError && topic.touched" 
+                        (blur)="validateTopic(topic.value)"
+                        (change)="validateTopic(topic.value)">
+                            <option value="default"></option>
+                            <option *ngFor = "let topic of topics">{{topic}}</option>
+                        </select>
+                        <small class="text-danger" [class.d-none]="!topicHasError || topic.untouched">Topic is required</small>
+                    </div>
+
+                    <div class="form-group my-3 fs-3">
+                        <label for="timePref">Time Preference</label>
+                        <div class="border lead p-3 my-3 fs-3">
+                            <div class="form-check">
+                                <input type="radio" name="timePreference" id="timePrefMorn" 
+                                class="form-check-input" value="morning" [(ngModel)]="userModel.timePreference"/>
+                                <label for="" class="form-check-label">Morning (9AM - 12PM)</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="timePreference" id="timePrefEven" 
+                                class="form-check-input" value="evening" [(ngModel)]="userModel.timePreference"/>
+                                <label for="" class="form-check-label">Evening (5PM - 8PM)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group my-3 fs-3">
+                        <input type="checkbox" name="subscribe" id="subscribe" 
+                        class="form-check-input" [(ngModel)]="userModel.subscribe"/>
+                        <label for="" class="form-check-label">Send me promotional offers</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-primary fs-3">SUBMIT</button>
+                </form>
+            </div>            
+        </div>
+    </section>
+</section>

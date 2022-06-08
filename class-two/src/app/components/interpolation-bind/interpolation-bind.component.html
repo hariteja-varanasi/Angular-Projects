@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="jumbotron">{{title}}</h1>
+            <h1 class="jumbotron">{{string}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="p-3 my-3 bg-primary text-white">
+                <h1 class="jumbotron">{{"Interpolation " + "Example."}}</h1>
+            </div>
+            <div class="p-3 my-3 bg-primary text-white">
+                <h1 class="jumbotron">Addition of Two numbers: {{2+2}}</h1>
+            </div>
+
+            <div class="p-3 my-3 bg-primary text-white">
+                <h1 class="jumbotron">{{'2'+'2'}}</h1>
+            </div>
+
+            <div class="p-3 my-3 bg-primary text-white">
+                <h1 class="jumbotron">{{title}}</h1>
+            </div>
+
+            <div class="p-3 my-3 bg-primary text-white">
+                <h1 class="jumbotron">{{title.length}}</h1>
+            </div>
+
+            <div class="p-3 my-3 bg-primary text-white">
+                <h1 class="jumbotron">{{title.toUpperCase()}}</h1>
+            </div>
+
+            <div class="p-3 my-3 bg-primary text-white">
+                <h1 class="jumbotron">{{title.toLowerCase()}}</h1>
+            </div>
+
+            <div class="p-3 my-3 bg-primary text-white">
+                <img src="../../../assets/images/chelsea4.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+
+            <div class="p-3 my-3 bg-primary text-white">
+                <h3>{{imgURL}}</h3>
+            </div>
+
+            <div class="p-3 my-3 bg-primary text-white">
+                <img src="{{imgURL}}" class="img-fluid img-thumbnail" alt="">
+            </div>
+
+            <div class="p-3 my-3 bg-primary text-white">
+                <h3>{{siteURL}}</h3>
+            </div>
+
+            <div class="p-3 my-3 bg-primary text-white">
+                <h3>{{greeting()}}</h3>
+            </div>
+        </div>
+    </div>
+</div>

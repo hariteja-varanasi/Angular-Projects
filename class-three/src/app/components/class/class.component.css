@@ -1,0 +1,36 @@
+.jumbotron {
+    background-color: gray;
+    color: lightgray;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.firstExample{
+    background-color:orange;
+    color: #fff;
+}
+
+.secondExample{
+    background-color:green;
+    color: #fff;
+}
+
+.thirdExample{
+    background-color:blue;
+    color: #fff;
+}
+
+.fourthExample{
+    background-color:red;
+    color: #fff;
+}
+
+.firstFont{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}

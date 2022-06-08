@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+    data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">        
+      <a href="#" class="navbar-brand text-white"><b>ANGULAR</b></a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">          
+        <li class="nav-item" [routerLink]="['/built-in']">
+          <a class="nav-link text-white">Built In</a>
+        </li>
+        <li class="nav-item" [routerLink]="['/custom']">
+          <a class="nav-link text-white">Custom</a>
+        </li>
+        <li class="nav-item" [routerLink]="['/chain']">
+          <a class="nav-link text-white">Chain</a>
+        </li>
+        <li class="nav-item" [routerLink]="['/parameter']">
+          <a class="nav-link text-white">Parameter</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

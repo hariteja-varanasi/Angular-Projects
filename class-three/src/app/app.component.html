@@ -1,0 +1,29 @@
+<!--<app-class></app-class>>
+<app-event></app-event>
+<app-page-not-found></app-page-not-found>
+<app-style></app-style>-->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">        
+        <a href="#" class="navbar-brand text-white"><b>ANGULAR</b></a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">          
+          <li class="nav-item" [routerLink]="['/event']">
+            <a class="nav-link text-white">Event</a>
+          </li>
+          <li class="nav-item" [routerLink]="['/style']">
+            <a class="nav-link text-white">Style</a>
+          </li>          
+          <li class="nav-item" [routerLink]="['/class']">
+            <a class="nav-link active text-white">Class</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>

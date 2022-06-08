@@ -1,0 +1,36 @@
+<section class="container">
+    <section class="row">
+        <div class="col">
+            <h1 class="jumbotron">Chain Pipe Component</h1>
+        </div>
+    </section>
+</section>
+
+<section class="container">
+    <section class="row">
+        <div class="col">
+            <div class="border lead p-3 my-3">
+                <p class="fs-3"><b>{{amount}}</b></p>
+                <p class="fs-3"><b>{{amount | currency: 'INR': 'symbol' | uppercase}}</b></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="border lead p-3 my-3">
+                <p class="fs-3"><b>{{date | date | uppercase}}</b></p>
+                <p class="fs-3"><b>{{date | date | lowercase}}</b></p>
+                <p class="fs-3"><b>{{date | date | titlecase}}</b></p>
+            </div>
+        </div>
+    </section>
+    <section class="row">
+        <div class="col">
+            <div class="border lead p-3 my-3">
+                <p class="fs-3"><b>{{data}}</b></p>
+                <p class="fs-3"><b>{{data | json}}</b></p>
+                <p class="fs-3"><b>{{data | json | uppercase}}</b></p>
+                <p class="fs-3"><b>{{data | json | lowercase}}</b></p>
+                <p class="fs-3"><b>{{data | json | titlecase}}</b></p>
+            </div>
+        </div>
+    </section>
+</section>

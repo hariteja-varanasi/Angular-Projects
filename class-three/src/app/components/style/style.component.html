@@ -1,0 +1,23 @@
+<section class="container">
+    <section class="row">
+        <section class="col">
+            <h1 class="jumbotron">Style Component Page</h1>
+        </section>
+    </section>
+</section>
+
+<section class="container">
+    <section class="row">
+        <section class="col">
+            <div class="border lead p-3">
+                <p class="p-2 my-2" style="color: orange;">Style Component Example One</p>
+                <p class="p-2 my-2" [ngStyle]="{'background-color': 'teal', 'color': 'white'}" >Style Component with ngStyle directive Example</p>
+                <p class="p-2 my-2" [style.color]="'white'" [style.background-color]="'red'">Style component with [style] directive example</p>
+                <p class="p-2 my-2" [style.color]="highLight">Style component with [style] directive property binding example</p>
+                <p class="p-2 my-2" [style.color]="hasError ? 'red' : 'green'">Style component with [style] directive with ? decision making example</p>
+                <button type="button" class="btn btn-outline-primary"
+                (click)="checkStyle();">Toggle Error Style</button>
+            </div>            
+        </section>
+    </section>
+</section>

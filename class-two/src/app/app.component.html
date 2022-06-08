@@ -1,0 +1,43 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="jumbotron">This is the App Component</h1>
+      <h1 class="jumbotron">{{title}}</h1>
+      <h1 class="jumbotron-temp">{{string}}</h1>
+    </div>
+  </div>
+</div>
+<app-bind></app-bind>
+<app-interpolation-bind></app-interpolation-bind>
+<app-page-not-found></app-page-not-found>
+<app-property-bind></app-property-bind>-->
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+    data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <!--LOGO-->
+      <a href="#" class="navbar-brand text-white"><b>ANGULAR</b></a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" [routerLink]="['/bind']">
+          <a class="nav-link active text-white">Bind</a>
+        </li>
+        <li class="nav-item" [routerLink]="['/interpol']">
+          <a class="nav-link text-white">Interpolation Bind</a>
+        </li>
+        <li class="nav-item" [routerLink]="['/prop']">
+          <a class="nav-link text-white">Property Bind</a>
+        </li>
+        <li class="nav-item" [routerLink]="['/contact']">
+          <a class="nav-link text-white">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet>
+  
+</router-outlet>

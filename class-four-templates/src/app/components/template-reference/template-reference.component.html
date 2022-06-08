@@ -1,0 +1,25 @@
+<section class="container">
+    <section class="row">
+        <section class="col">
+            <h1 class="jumbotron">Template Reference Component Page</h1>
+        </section>
+    </section>
+</section>
+
+<section class="container">
+    <section class="row">
+        <section class="col">
+            <div class="lead p-3 border">
+                <input type="text" class="form-control my-2" placeholder="Enter Some Value" #dataOne />
+                <button type="button" class="btn btn-outline-primary my-2" (click)="displayValueOne(dataOne);">Click</button>
+                <p class="my-2 p-2">Check Your Result Here: {{resultZero}}</p>
+            </div>
+            
+            <div class="lead p-3 border">
+                <input type="text" class="form-control my-2" placeholder="Enter Some Value" #dataTwo />
+                <button type="button" class="btn btn-outline-primary my-2" (click)="displayValueTwo(dataTwo.value);">Click</button>
+                <p class="my-2 p-2">Check Your Result Here: {{resultOne}}</p>
+            </div>
+        </section>
+    </section>
+</section>

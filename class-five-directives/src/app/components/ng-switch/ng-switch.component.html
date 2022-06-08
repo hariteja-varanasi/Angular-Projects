@@ -1,0 +1,51 @@
+<section class="container">
+    <section class="row">
+        <section class="col">
+            <h1 class="jumbotron">NG Switch Component</h1>
+        </section>
+    </section>
+</section>
+
+<section class="container">
+    <section class="row">
+        <div class="col">
+            <div class="lead border p-3">
+                <label for="number" class="fs-3">Enter Number</label>
+                <input type="number" class="form-control" [(ngModel)]="angular"
+                placeholder="Enter Number">
+            </div>
+        </div>
+    </section>
+</section>
+
+<section class="container">
+    <section class="row">
+        <div class="col">
+            <div class="lead border p-3">                
+                <div [ngSwitch]="angular">
+                    <div *ngSwitchCase="1">
+                        <h4>Case One</h4>
+                    </div>
+                    <div *ngSwitchCase="2">
+                        <h4>Case Two</h4>
+                    </div>
+                    <div *ngSwitchCase="3">
+                        <h4>Case Three</h4>
+                    </div>
+                    <div *ngSwitchCase="4">
+                        <h4>Case Four</h4>
+                    </div>
+                    <div *ngSwitchCase="5">
+                        <h4>Case Five</h4>
+                    </div>
+                    <div *ngSwitchCase="6">
+                        <h4>Case Six</h4>
+                    </div>
+                    <div *ngSwitchDefault>
+                        <h4>Case Default</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

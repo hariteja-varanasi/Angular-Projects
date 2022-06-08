@@ -1,0 +1,41 @@
+<section class="container">
+    <section class="row">
+        <div class="col">
+            <h1 class="jumbotron">Parameterized Pipe Component</h1>
+        </div>
+    </section>
+</section>
+
+<section class="container">
+    <section class="row">
+        <div class="col">
+            <div class="border lead p-3 my-3">
+                <p class="fs-3"><b>{{message}}</b></p>
+                <p class="fs-3"><b>{{message | uppercase}}</b></p>
+                <p class="fs-3"><b>{{message | slice: 4}}</b></p>
+                <p class="fs-3"><b>{{message | slice: 4:11}}</b></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="border lead p-3 my-3">
+                <p class="fs-3"><b>{{amount}}</b></p>
+                <p class="fs-3"><b>{{amount | currency: 'INR': 'symbol'}}</b></p>
+                <p class="fs-3"><b>{{amountDec | number: '1.8'}}</b></p>
+                <p class="fs-3"><b>{{amountDec | number: '1.2-2'}}</b></p>
+                <p class="fs-3"><b>{{amountDec | number: '1.2-2' | number: '3.4-4'}}</b></p>
+                <p class="fs-3"><b>{{amountDec | number: '3.2-2'}}</b></p>
+            </div>
+        </div>
+    </section>
+    <section class="row">
+        <div class="col">
+            <div class="border lead p-3 my-3">
+                <p class="fs-3"><b>{{date}}</b></p>
+                <p class="fs-3"><b>{{date | date:'MM/dd/yyyy'}}</b></p>
+                <p class="fs-3"><b>{{date | date:'yyyy-MM-dd HH:mm:ss Z'}}</b></p>
+                <p class="fs-3"><b>{{date | date:"MM/dd/yyyy 'at' h:mma" }}</b></p>
+                <p class="fs-3"><b>{{date | date:'medium'}}</b></p>
+            </div>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+    data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">        
+      <a href="#" class="navbar-brand text-white"><b>ANGULAR</b></a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">          
+        <li class="nav-item" [routerLink]="['/dynamic']">
+          <a class="nav-link text-white">Dynamic</a>
+        </li>
+        <li class="nav-item" [routerLink]="['/static']">
+          <a class="nav-link text-white">Static</a>
+        </li>        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
