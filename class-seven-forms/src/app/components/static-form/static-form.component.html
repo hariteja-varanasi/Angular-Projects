@@ -9,8 +9,11 @@
 <section class="container">
     <section class="row">
         <div class="col">
-            <div class="lead border p-3 my-3">                
-                <form #userForm = "ngForm" (ngSubmit)="onSubmit()">                    
+            <div class="lead border p-3 my-3">  
+                <div class="alert alert-danger" *ngIf="errorMsg">
+                    <strong>{{errorMsg}}</strong>
+                </div>
+                <form #userForm = "ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()">                    
                     <div class="form-group my-3 fs-3">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" name="name" #name="ngModel" required

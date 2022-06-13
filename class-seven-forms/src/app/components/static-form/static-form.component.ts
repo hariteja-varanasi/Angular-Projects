@@ -11,15 +11,8 @@ export class StaticFormComponent implements OnInit {
 
   constructor(private enrollmentService: EnrollmentService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
   }
-
-  /*name: any;
-  email: any;
-  phone: any;
-  topic: any;
-  timePreference: any;
-  subscribe: any;*/
 
   userModel = new User("", "", "", "", "", "");  
 
@@ -36,13 +29,16 @@ export class StaticFormComponent implements OnInit {
     }    
   }
   
+  errorMsg: any;
+  submitted = false;
   onSubmit(){
+    this.submitted = true;
     console.log("data : " + this.userModel);
     this.enrollmentService.enroll(this.userModel)
     .subscribe(
       res => console.log("SUCCESS = ", res),
-      error => console.log("ERROR = ", error)
-      );
+      //error => console.log("ERROR = ", error)
+      error => this.errorMsg = error.statusText);
   }
 
 }

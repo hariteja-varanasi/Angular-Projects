@@ -10,12 +10,13 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', function(req, res){
-    res.send("Hello From Server.");
+    res.send("Hello From Server.");    
 });
 
 app.post('/enroll', function(req, res){
-    console.log("Request is : " + req.body);
-    //res.send("Response from Server POST enroll method.");
+    console.log("Request Body is :");
+    console.log(req.body);
+    res.status(401).send({"message": "Data Received."});
 });
 
 app.listen(PORT, function(){

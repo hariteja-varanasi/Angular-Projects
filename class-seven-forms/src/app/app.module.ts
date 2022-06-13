@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 import { StaticFormComponent } from './components/static-form/static-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EnrollmentService } from './services/enrollment.service';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -21,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [EnrollmentService],
   bootstrap: [AppComponent]
