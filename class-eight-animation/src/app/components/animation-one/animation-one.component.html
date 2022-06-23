@@ -1,7 +1,38 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col">
             <h1 class="jumbotron">Animation One Component</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">    
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-warning fs-3 mb-3" type="button" 
+            (click)="toggleArticle()">Toggle Article</button>
+        </div>
+    </div>
+    <div class="row">        
+        <div class="col" [@openClose] = "isOpen ? 'open' : 'closed'">            
+            <article class="border lead p-3 my-3">
+                <h1 class="text-center">Sample Title</h1>
+                <p class="fs-3 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nam 
+                    provident voluptates tempore commodi explicabo quaerat, quasi accusamus 
+                    consequuntur est eos harum molestiae minima velit eveniet consectetur 
+                    amet repellat voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing 
+                    elit. Qui, nam provident voluptates tempore commodi explicabo quaerat, quasi 
+                    accusamus consequuntur est eos harum molestiae minima velit eveniet consectetur 
+                    amet repellat voluptatem.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nam 
+                    provident voluptates tempore commodi explicabo quaerat, quasi accusamus 
+                    consequuntur est eos harum molestiae minima velit eveniet consectetur 
+                    amet repellat voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing 
+                    elit. Qui, nam provident voluptates tempore commodi explicabo quaerat, quasi 
+                    accusamus consequuntur est eos harum molestiae minima velit eveniet consectetur 
+                    amet repellat voluptatem.
+                </p>
+            </article>
         </div>
     </div>
 </div>

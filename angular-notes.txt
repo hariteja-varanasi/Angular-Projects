@@ -148,3 +148,7 @@ CREATE A SERVICE
 
 	-> Command to create a Service
 		ng g s services/enrollment
+
+npm i -g json-server
+
+json-server --watch ./db/db.json

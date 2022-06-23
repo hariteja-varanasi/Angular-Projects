@@ -1,0 +1,32 @@
+<div class="container-fluid w-75">
+    <div class="row">
+        <div class="col">
+            <h1 class="jumbotron display-1">Dashboard Component</h1>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col my-3 mx-3 border border-light" *ngFor="let x of users">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="display-5 text-center">{{x.name}}</h5>                    
+                </div>
+                <div class="card-body">
+                    <p class="fs-3">Email: 
+                        <span>{{x.email}}</span>
+                    </p>
+                </div>
+                <div class="card-body">
+                    <p class="fs-3">Mobile No: 
+                        <span>{{x.mobile}}</span>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="" class="btn btn-outline-primary fs-3" routerLink="/update/{{x.id}}">Edit</a>
+                    <button class="btn mx-3 btn-outline-danger fs-3 float-end" (click)="deleteHandler(x.id)">Delete</button>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,3 +5,42 @@
         </div>
     </div>
 </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-outline-primary fs-3" type="button" (click)="toggleSlider()">Toggle Slider</button>
+        </div>
+    </div>
+
+    <div class="row" [@slider] *ngIf="status">
+        <div class="col-md-6 offset-md-3">
+            <div class="lead border p-3 my-3">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="">
+                            <fieldset>
+                                <legend class="text-center fs-3">Login Here</legend>
+
+                                <div class="form-group my-3 fs-3">
+                                    <label for="">Username</label>
+                                    <input type="text" id="username" name="username" class="form-control fs-3">
+                                </div>
+
+                                <div class="form-group my-3 fs-3">
+                                    <label for="">Password</label>
+                                    <input type="password" id="password" name="password" class="form-control fs-3">
+                                </div>
+
+                                <div class="form-group my-3 fs-3">
+                                    <button class="btn btn-outline-success my-3 fs-3">Login</button>
+                                    <button class="btn btn-outline-info my-3 mx-3 fs-3">Sign Up</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
